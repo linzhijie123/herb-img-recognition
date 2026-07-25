@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<input type="button" value="btn" onClick="Modify()">
+<input type="button" value="btn2" onClick="Modify_2()">
+</form>
+<p id="hello">123</p>
+<p id="hello2">study</p>
+</body>
+//当不希望一载入HTML就运行javascript时，而是通过触发事件，这使通常将Javascript放在HTML的<head></head>里
+<script type="text/javascript">
+function Modify()
+{
+//根据id获取
+    var a1 = document.getElementById("hello");
+    alert(a1.innerHTML);
+//获取标签属性改变文本值
+    a1.innerHTML= "hello world";
+}
+function Modify_2()
+{
+    var a2 = document.getElementById("hello2");
+    alert(a2.innerText);
+    a2.innerText= "学习使我快乐！";
+}
+</script>
+</html>

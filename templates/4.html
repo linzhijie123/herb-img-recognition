@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/fonts.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><img src="../static/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <section class="section section-intro">
+        <div class="intro-wrap">
+          <div class="container">
+            <h1 class="text-center">基于深度学习的中草药图像识别</h1>
+            <h4 class="text-accent text-center">包含常见的50多种草药识别</h4>
+            <div class="row align-items-center justify-content-center">
+              <div class="col-lg-8 text-center text-lg-left">
+                <div class="intro-media-box">
+               <img src="../static/images/intro-img-713x573.jpg"  >
+<!--                  <img src="data:;base64,{{ img_stream }}" name="img1" alt="" width="713" height="573"/>-->
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-7">
+                <form class="rd-form rd-mailform form-style-1 negative-xl-50" method="post" enctype="multipart/form-data">
+                  <div class="row row-10">
+                    <div class="col-12">
+
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">上传草药图片</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="qw">
+                             </div>
+                      <div class="form-wrap">
+                        <h4>产源地</h4>
+                      </div>
+
+                    </div>
+                    <div class="col-12">
+                      <div class="form-button form-wrap">
+                        <input type="submit" value="上传并显示">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+          {% if filename %}
+    <div style="margin-top: 20px;">
+        <h3>上传的图片：</h3>
+        < img src="{{ url_for('static', filename='uploads/' + filename) }}"
+             style="max-width: 500px; margin-top: 10px;">
+    </div>
+    {% endif %}
+      <section class="section section-md bg-gray-400">
+
+        <div class="container">
+          <div class="row row-40">
+            <div class="col-lg-3 col-md-6">
+              <div class="icon-box text-center d-flex justify-content-center flex-column align-items-center">
+                <div class="icon-lg icon-primary material-design-map103"></div>
+                <h4>产源地</h4>
+                <p class="offset-xl-20">分布于中国、俄罗斯和朝鲜；在中国分布于辽宁东部、吉林东半部和黑龙江东部。一般生于海拔数百米的落叶阔叶林或针叶阔叶混交林下。</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="icon-box text-center d-flex justify-content-center flex-column align-items-center">
+                <div class="icon-lg icon-primary fa-coffee"></div>
+                <h4>外形</h4>
+                <p class="offset-xl-20">人参（拉丁学名：Panax ginseng C. A. Mey.）是五加科、人参属多年生草本植物。高达60厘米；根茎短，主根纺锤形；掌状复叶3~6轮生茎顶，叶柄长3~8厘米，无毛；小叶3~5，膜质，中央小叶椭圆形或长圆状椭圆形，长8~12厘米，侧生小叶卵形或菱状卵形，长2~4厘米，先端长渐尖，基部宽楔形，具细密锯齿，齿具刺尖，上面疏被刺毛，下面无毛，侧脉5~6对；小叶柄长0.5~2.5厘米</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="icon-box text-center d-flex justify-content-center flex-column align-items-center">
+                <div class="icon-lg icon-primary material-design-thumb54"></div>
+                <h4>药用价值</h4>
+                <p class="offset-xl-20">人参的肉质根为强壮滋补药，适用于调整血压、恢复心脏功能、神经衰弱及身体虚弱等症，也有祛痰、健胃、利尿、兴奋等功效。</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="icon-box text-center d-flex justify-content-center flex-column align-items-center">
+                <div class="icon-lg icon-primary material-design-two385"></div>
+                <h4>适用人群</h4>
+                <p class="offset-xl-20">适合以下人群食用人参： - 体虚人群：人参具有补气血、益精髓的作用，适合身体虚弱、免疫力低下的人群，如老年人、久病体虚者等。 - 疲劳人群：人参可以帮助缓解疲劳，提高身体的抗压能力，适合工作压力大、经常熬夜的人群。 - 术后康复人群：人参有助于促进身体的恢复和愈合，适合手术后的病人进行调养。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--About Us-->
+      <section class="section section-md inset-bm-xl-0">
+        <div class="container">
+          <h3 class="text-center text-gray-800">About Us</h3>
+          <div class="row justify-content-center row-30 mt-xl-0">
+            <div class="col-xl-6 col-lg-7 inset-top-45">
+              <p class="text-lg text-primary">We want our teas to have more than just great flavor. Great tea should also have superb health properties and be high in quality.</p>
+              <p>We also treasure our community and our environment. Therefore, we put forth our best efforts to practice sustainable and green activities for the sake of our community and natural environment.</p>
+              <p>We all just want to be…happy. We all want to be healthy. We all want a feeling of belonging and interaction. Tea culture makes it all possible. We want to make a difference through sharing our love for tea and tea culture.</p>
+            </div>
+            <div class="col-xl-6 col-lg-5">
+              <div class="about-media-box"><img src="../static/images/about-1-502x423.jpg" alt="" width="502" height="423"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Our Teas-->
+      <section class="section section-md bg-black-3">
+        <div class="container">
+          <h3 class="text-center text-primary">Our Teas</h3>
+          <div class="row row-30 mt-xl-70">
+            <div class="col-lg-4 col-sm-6">
+              <ul class="list-marked">
+                <li><a href="#">Earl Grey</a></li>
+                <li><a href="#">Assam</a></li>
+                <li><a href="#">Chai</a></li>
+                <li><a href="#">Tamayokucha</a></li>
+                <li><a href="#">Jasmine</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <ul class="list-marked">
+                <li><a href="#">Tropical Green</a></li>
+                <li><a href="#">Alphe Berry</a></li>
+                <li><a href="#">Chamomile</a></li>
+                <li><a href="#">Peppermint</a></li>
+                <li><a href="#">African Sunset</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <ul class="list-marked">
+                <li><a href="#">Better Morning</a></li>
+                <li><a href="#">Better Belly</a></li>
+                <li><a href="#">Better Rest</a></li>
+                <li><a href="#">English Breakfast</a></li>
+                <li><a href="#">Whiter than white</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--News-->
+      <section class="section section-md">
+        <div class="container">
+          <h3 class="text-center">Latest news</h3>
+          <div class="row row-40 mt-2-xl-70">
+            <div class="col-lg-6">
+              <div class="row row-40">
+                <div class="col-12">
+                  <div class="news-box">
+                    <h5><a href="#">What is Irish breakfast?</a></h5>
+                    <p>Irish Breakfast is not English Breakfast that's been dyed green and sold by a leprechaun. English Breakfast is a blend of black teas that's meant to brew up strong and black. Irish Breakfast is the same thing, but perhaps even more strong and rich.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="news-box">
+                    <h5><a href="#">Different ways to make premium loose leaf tea</a></h5>
+                    <p>Just as you’d want to capture every nuance of the flavor of a phenomenal glass of wine by using the best vessel you have, the same can be said about premium, high-quality loose leaf tea. It's always a good idea to prepare your tea beautifully.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row row-40">
+                <div class="col-12">
+                  <div class="news-box">
+                    <h5><a href="#">10 things you need to know about black tea</a></h5>
+                    <p>What is Black Tea exactly? Read up on our ten bite-sized chunks of tea facts and you’ll be amazed at how little you knew before. First, Black tea is called black tea because of the oxidization during processing, which makes the leaves black.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="news-box">
+                    <h5><a href="#">Oolong Tea: How to select, sip, and savor</a></h5>
+                    <p>Oolong tea is in the media a lot because people are fond of calling them diet teas. While green and black teas may become bitter if you let them steep too long, a lot of oolongs are more forgiving. Today we’re focussing on three popular oolongs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Parallax-->
+      <section class="parallax-container section" data-parallax-img="../static/images/parallax-1.jpg">
+        <div class="parallax-content section-xxl context-light text-center">
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-10 col-lg-9">
+                <div class="text-xl text-primary">Subscribe</div>
+                <p class="offset-xl-40 text-lg text-gray-800">Subscribe to the Tea company mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+                <form class="rd-form rd-mailform rd-form-inline subscribe-form" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap inpt-wrap">
+                    <input class="form-input" id="subscribe-form-email" type="email" name="email" data-constraints="@Email @Required">
+                    <label class="form-label" for="subscribe-form-email">Your E-mail</label>
+                  </div>
+                  <div class="form-button form-wrap">
+                    <button class="button button-primary" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Reviews-->
+      <section class="section section-md">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="review-box"><span class="quote"></span>
+                <p class="text-primary">The tea from the Tea Company is truly unique. This has to be tea at it`s finest.</p>
+                <div class="review-detail">
+                  <div class="review-media"><img src="../static/images/user-1-69x69.jpg" alt="" width="69" height="69"/>
+                  </div>
+                  <div class="review-name"><span class="text-md font-weight-medium text-gray-800">Mark Johnson</span><span>Minneapolis</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="review-box"><span class="quote"></span>
+                <p class="text-primary">Your Rooibos really is the best I have ever tasted! This is one of my favourite teas.</p>
+                <div class="review-detail">
+                  <div class="review-media"><img src="../static/images/user-2-69x69.jpg" alt="" width="69" height="69"/>
+                  </div>
+                  <div class="review-name"><span class="text-md font-weight-medium text-gray-800">Laura Stegner</span><span>South Hadley</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="review-box"><span class="quote"></span>
+                <p class="text-primary">Absolutely love the Oolong and the Earl Grey is the best we have had from anywhere.</p>
+                <div class="review-detail">
+                  <div class="review-media"><img src="../static/images/user-3-69x69.jpg" alt="" width="69" height="69"/>
+                  </div>
+                  <div class="review-name"><span class="text-md font-weight-medium text-gray-800">John McCoist</span><span>New York</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section footer-classic context-light">
+        <div class="container">
+          <div class="text-xl text-gray-800">From White to Black tea and everything in between</div>
+          <div class="offset-xl-30 text-lg text-primary">Old tradition with a fresh perspective!</div><a class="button button-primary btn-xl" href="#">Get Started Now!</a>
+          <p class="rights"><span class="text-sm text-primary font-weight-bold">Tea</span><span>&nbsp;</span><span class="text-sm font-weight-thin text-gray-800">company</span><span>&nbsp;</span><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>&nbsp;</span><span>All rights reserved</span> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板">网站模板</a></p>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="../static/js/core.min.js"></script>
+    <script src="../static/js/script.js"></script>
+    <!--coded by Drel-->
+  </body>
+</html>
